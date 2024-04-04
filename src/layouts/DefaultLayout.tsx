@@ -30,12 +30,13 @@ export function DefaultLayout({
   return (
     <div className='flex flex-col gap-4'>
       <h1 className="font-bold text-2xl mb-8 text-slate-800">{label}</h1>
-      <label>
+      <label data-disabled={omitKey} className="data-[disabled=true]:opacity-50">
         <input
           type="checkbox"
           checked={generateKeyOnRender}
           onChange={(e) => setGenerateKeyOnRender(e.target.checked)}
           className="mr-2"
+          disabled={omitKey}
         />
         Generate key on render
       </label>
