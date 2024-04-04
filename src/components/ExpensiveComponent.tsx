@@ -36,5 +36,5 @@ export function ExpensiveComponent({ children }: ExpensiveComponentProps) {
     doPointlessComputationsWithBlocking();
   }, [])
 
-  return <li>{children}</li>
+  return children;
 }
